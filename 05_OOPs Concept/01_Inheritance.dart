@@ -1,84 +1,62 @@
-// +++++++++++++++++++++++++++OOPS+++++++++++++++++++++++++++++
+// ----------------------Inheritance-----------------------
 
-//Inheritance
-// "is-a" relationship
-
-
-void main(){
-
-  Car car = Car();
-  // print(car.noOfWheels);
-  // print(car.isEngineWorking);
-  // print(car.isWorking());
-  car.accelarate();
-  print(car.speed);
-  
-
-
-  Truck truck = Truck();
-  // print(truck.noOfWheels);
-  // print(truck.isEngineWorking);
-
-  Vehicle car1 = Car(); // TypeCasting -  Upcasting
-  // print(car1.isEngineWorking); 
-  // print(car1.noOfWheels);
-  // print((car1 as Car).noOfWheels);
-  // print((car1 as Truck).noOfWheels);  runtime error as car1 is type of Car
-
+class VehicleMethods {
+  void accelarate() {
+    print("Accelarate");
+  }
 }
 
-class SuperVehicle{
-  int speed = 50;
-  int price = 10;
-
-  bool isWorking(){
-    return false;
-  }
-
-  void accelarate(){
-    speed+=20;
-  }
-
-}
-
-class Vehicle extends SuperVehicle{
-
-  
+class VehicleProperties {
   bool isEngineWorking = false;
-  bool isLightOn = false;
-
-
-  
-  void accelarate(){
-    speed+=15;
-  }
-
+  bool isLightOnn = true;
+  int noOfWheels = 10;
 }
 
-class Car extends Vehicle{
+class Car extends VehicleProperties implements VehicleMethods {
+  @override
+  bool isEngineWorking = false;
 
+  @override
+  bool isLightOnn = true;
+
+  @override
   int noOfWheels = 4;
 
-  void wheels(){
-    print(this.noOfWheels);
+  @override
+  void accelarate() {
+    print(isEngineWorking);
+    print("Accelarate the car");
   }
-
-  void accelarate(){
-    speed+=5;
-  }
-
-
 }
 
+class Truck extends VehicleProperties implements VehicleMethods {
+  @override
+  bool isEngineWorking = false;
 
-class Truck extends Vehicle{
+  @override
+  bool isLightOnn = true;
 
-  int noOfWheels = 6;
+  @override
+  int noOfWheels = 8;
 
-  void wheels(){
-    print(this.noOfWheels);
+  @override
+  void accelarate() {
+    print("Accelarate the truck");
   }
-
-
 }
 
+class Bike extends VehicleProperties implements VehicleMethods {
+  @override
+  bool isEngineWorking = false;
+
+  @override
+  bool isLightOnn = true;
+
+  @override
+  int noOfWheels = 2;
+
+  @override
+  void accelarate() {
+    print("Accelarate the bike");
+  }
+}
