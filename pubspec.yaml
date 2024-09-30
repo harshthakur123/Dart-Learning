@@ -1,0 +1,11 @@
+name: my_dart_project
+description: A basic Dart project
+
+version: 1.0.0
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  http: ^1.2.2   # Dart-compatible package
+  path: ^1.8.0    # Another Dart-compatible package
