@@ -71,10 +71,10 @@
       "name": "my_dart_project",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-09-30T11:39:05.596217Z",
+  "generated": "2024-10-01T06:54:30.857022Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "pubCache": "file:///C:/Users/thaku/AppData/Local/Pub/Cache"

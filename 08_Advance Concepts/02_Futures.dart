@@ -18,7 +18,7 @@ import 'dart:convert';
 // }
 
 void main() {
-  var url = Uri.https('jsonplaceholder.typcode.com', 'users/1');
+  var url = Uri.https('jsonplaceholder.typicode.com', 'users/1');
   // final res = await http.get(url);
   // print(jsonDecode(res.body)['name']);
 
